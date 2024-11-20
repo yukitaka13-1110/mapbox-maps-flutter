@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mapbox_maps_flutter/mapbox_maps_flutter.dart';
+
 import 'example.dart';
 
 class FullMapExample extends StatefulWidget implements Example {
@@ -111,13 +112,15 @@ class FullMapExampleState extends State<FullMapExample> {
         body: MapWidget(
           key: ValueKey("mapWidget"),
           cameraOptions: CameraOptions(
-              center: Point(
-                  coordinates: Position(
-                6.0033416748046875,
-                43.70908256335716,
-              )),
-              zoom: 3.0),
-          styleUri: MapboxStyles.LIGHT,
+            center: Point(
+              coordinates: Position(
+                130.45,
+                33.60908256335716,
+              ),
+            ),
+            zoom: 12.0,
+          ),
+          // styleUri: MapboxStyles.LIGHT,
           textureView: true,
           onMapCreated: _onMapCreated,
           onStyleLoadedListener: _onStyleLoadedCallback,
